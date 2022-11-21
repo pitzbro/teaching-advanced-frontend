@@ -6,6 +6,7 @@
     --clr-primary-base: cornflowerblue;
     --clr-secondary-300: #bfbfbf;
     --clr-secondary-400: #8a8a8a;
+    --clr-secondary-800: #545454;
     --clr-secondary-900: #262626;
     --clr-secondary-base: #171717;
 
@@ -20,6 +21,7 @@ body {
     color: var(--clr-secondary-base);
     background-color: var(--clr-secondary-base);
     margin: 4rem 6rem;
+    font-family: 'Lato', sans-serif;
 }
 
 h1,
@@ -31,13 +33,14 @@ h6 {
     color: var(--clr-secondary-300);
     text-transform: uppercase;
     font-weight: 400;
-    text-align: center;
+    /* text-align: center; */
     font-size: 2em;
     margin-bottom: 2em;
 }
 
 .container-simple {
     container-type: inline-size;
+    border
 }
 
 .brace {
@@ -95,7 +98,7 @@ h6 {
     left: 50%;
     bottom: calc(2rem - 6px);
     transform: translate(-50%, 50%);
-    border: 2px solid var(--clr-secondary-400);
+    border: 2px solid var(--clr-secondary-800);
     padding: 6px 10px;
     color: var(--clr-secondary-300);
     background-color: var(--clr-secondary-900);
@@ -107,9 +110,6 @@ h6 {
     border: 4px double #ffc107;
     margin-bottom: .3rem;
     font-size: 1.3rem;
-
-    container-type: inline-size;
-
 }
 
 .container-simple[data-type="narrow"] {
