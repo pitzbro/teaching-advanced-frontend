@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@container</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="simple-container">
+
+        <h2>Simple @container example</h2>
+
+        <div class="container">
+            <div class="container-simple" data-type="narrow">
+                <p>max-width: 600px</p>
+                <span class="width-label">900px</span>
+                <div class="brace left"></div>
+                <div class="brace right"></div>
+            </div>
+            <div class="container-simple" data-type="medium">
+                <p>max-width: 860px</p>
+                <span class="width-label">900px</span>
+                <div class="brace left"></div>
+                <div class="brace right"></div>
+            </div>
+            <div class="container-simple" data-type="wide">
+                <p>max-width: 1200px</p>
+                <span class="width-label">900px</span>
+                <div class="brace left"></div>
+                <div class="brace right"></div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script>
+        const containers = document.querySelectorAll('.container-simple');
+        const labels = document.querySelectorAll('.width-label');
+
+        updateWidth();
+
+        window.onresize = () => {
+            updateWidth();
+        }
+
+        function updateWidth() {
+            containers.forEach((container, idx) => {
+                const label = container.querySelector('.width-label');
+                const w = container.offsetWidth;
+                label.innerText = w + 'px';
+            })
+        }
+    </script>
+
+</body>
+
+</html>
