@@ -20,7 +20,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--clr-secondary-base);
     background-color: var(--clr-secondary-base);
-    margin: 4rem 6rem;
+    margin: 4rem 4rem;
     font-family: 'Lato', sans-serif;
 }
 
@@ -107,9 +107,11 @@ h6 {
 .container-simple p {
     background-color: var(--clr-primary-base);
     padding: 40px;
+    font-size: 1.6rem;
     border: 4px double #ffc107;
     margin-bottom: .3rem;
-    font-size: 1.3rem;
+    padding: 3cqi;
+    font-size: clamp(1.6rem, 3cqi, 6rem);
 }
 
 .container-simple[data-type="narrow"] {
