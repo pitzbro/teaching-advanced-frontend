@@ -1,0 +1,74 @@
+:root {
+    --clr-error: #ff622b;
+    --clr-success: #428908;
+    --clr-marker: #ffeb3b;
+
+    --clr-primary-base: cornflowerblue;
+    --clr-secondary-000: #fff;
+    --clr-secondary-300: #bfbfbf;
+    --clr-secondary-400: #8a8a8a;
+    --clr-secondary-800: #545454;
+    --clr-secondary-900: #262626;
+    --clr-secondary-base: #171717;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns:
+        minmax(1.6rem, 1fr) minmax(auto, 960px) minmax(1.6rem, 1fr);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--clr-secondary-base);
+    background-color: var(--clr-secondary-base);
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    color: var(--clr-secondary-000);
+    font-size: 2rem;
+    overflow-x: hidden;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--clr-secondary-300);
+    text-transform: uppercase;
+    font-weight: 400;
+    /* text-align: center; */
+    font-size: 2em;
+    margin-bottom: 2em;
+}
+
+body>* {
+    grid-column: 2;
+}
+
+body {
+    scroll-timeline: scroll-page block;
+}
+
+
+.read-progerssion {
+    grid-column: 1 / -1;
+    position: sticky;
+    height: 10px;
+    background-color: limegreen;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    animation: scrollProgress 1s linear both;
+    animation-timeline: scroll-page;
+}
+
+@keyframes scrollProgress {
+    to {
+        transform: translateX(0%);
+    }
+}
