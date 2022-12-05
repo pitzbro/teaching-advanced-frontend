@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+}
+
+/* .full-image {
+    width: 100%;
+} */
+
+img {
+    display: block;
+    /* height: 100vh;
+    object-fit: cover; */
+}
