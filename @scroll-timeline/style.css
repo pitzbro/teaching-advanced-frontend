@@ -64,7 +64,7 @@ body {
     left: 0;
     transform: translateX(100%);
     animation: scrollProgress 1s linear both;
-    animation-timeline: scroll-page;
+    animation-timeline: scroll();
 }
 
 @keyframes scrollProgress {
