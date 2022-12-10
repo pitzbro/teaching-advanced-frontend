@@ -7,65 +7,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example Responsive Images</title>
     <link rel="stylesheet" href="./styles/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&family=EB+Garamond:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
-<body class="main-container">
+<body class="main-container" lang="en">
 
     <article class="main-content">
         <header>
-            <h1>Anonymous Newspaper</h1>
+            <h1>Anony­­­mous Newspaper</h1>
         </header>
 
-        <main>
+        <main class="card-container">
+
+            <div class="banner full">
+                <h3>Banner I</h3>
+                <picture>
+                    <source media="(min-width: 600px)" srcset="./images/andy/andy_landscape.jpg" />
+                    <source media="(min-width: 460px)" srcset="./images/andy/andy_square.jpg" />
+                    <source srcset="./images/andy/andy_portrait.jpg" />
+                    <img src="./images/andy/andy_lanscape.jpg" />
+                </picture>
+            </div>
 
             <div class="card">
                 <div class="card-inner">
                     <h3 class="card-title">Card Title I</h3>
-                    <img src="./images/package.jpg" alt="" class="card-image">
+                    <!-- <img src="./images/packages/package_l.gif" alt="" class="card-image"> -->
+                    <img class="card-image" alt="" srcset="
+                    ./images/packages/package_xl.gif 370w, 
+                    ./images/packages/package_l.gif 334w, 
+                    ./images/packages/package_m.gif 300w, 
+                    ./images/packages/package_s.gif 290w" 
+                    sizes="
+                    (min-width: calc(1200px + 4rem)) 370px, 
+                    (min-width: calc(1020px + 4rem)) 290px,
+                    (min-width: 840px) 334px,
+                    (min-width: 680px) calc(50vw - 2rem - 60px),
+                    (min-width: calc(370px + 4rem)) 370px,
+                    calc(100vw - 6rem)" 
+                    src="./images/packages/package_xl.gif">
+
                     <p class="card-text">
-                        Quaerat, accusantium doloribus alias minima, id illum voluptas excepturi dolorum voluptatibus
-                        possimus dignissimos repellendus et cumque qui non, ullam autem aliquam hic!
+                        Quaerat, accusantium doloribus alias minima, id illum voluptas excepturi dolorum voluptatibus!
                     </p>
                 </div>
             </div>
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi molestiae quam obcaecati nobis
-                reprehenderit, non modi tempore impedit aliquam laboriosam voluptatibus voluptatum consequatur sint neque
-                quasi aspernatur? Atque, dicta asperiores.
-            </p>
+            <div class="card">
+                <div class="card-inner">
+                    <h3 class="card-title">Card Title I</h3>
+                    <!-- <img src="./images/packages/package_l.gif" alt="" class="card-image"> -->
+                    <img class="card-image" alt="" srcset="
+                    ./images/packages/package_xl.gif 370w, 
+                    ./images/packages/package_l.gif 334w, 
+                    ./images/packages/package_m.gif 300w, 
+                    ./images/packages/package_s.gif 290w" 
+                    sizes="
+                    (min-width: calc(1200px + 4rem)) 370px, 
+                    (min-width: calc(1020px + 4rem)) 290px,
+                    (min-width: 840px) 334px,
+                    (min-width: 680px) calc(50vw - 2rem - 60px),
+                    (min-width: calc(370px + 4rem)) 370px,
+                    calc(100vw - 6rem)" 
+                    src="./images/packages/package_xl.gif">
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi molestiae quam obcaecati nobis
-                reprehenderit, non modi tempore impedit aliquam laboriosam voluptatibus voluptatum consequatur sint neque
-                quasi aspernatur? Atque, dicta asperiores.
-            </p>
+                    <p class="card-text">
+                        Quaerat, accusantium doloribus alias minima, id illum voluptas excepturi dolorum voluptatibus!
+                    </p>
+                </div>
+            </div>
 
         </main>
 
-        <aside>
-            <h2>Aside</h2>
+        <aside class="card-container">
+
             <div class="card">
                 <div class="card-inner">
-                    <h3 class="card-title">Card Title II</h3>
-                    <img src="./images/package.jpg" alt="" class="card-image">
+                    <h3 class="card-title">Card II</h3>
+                    <!-- <img src="./images/packages/package_l.gif" alt="" class="card-image"> -->
+                    <img class="card-image" alt="" srcset="
+                    ./images/packages/aside/package_xl.gif 370w, 
+                    ./images/packages/aside/package_l.gif 334w, 
+                    ./images/packages/aside/package_m.gif 300w, 
+                    ./images/packages/aside/package_s.gif 290w" 
+                    sizes="
+                    (min-width: calc(1020px + 4rem)) 300px,
+                    (min-width: 840px) 334px,
+                    (min-width: 680px) calc(50vw - 2rem - 60px),
+                    (min-width: calc(370px + 4rem)) 370px,
+                    calc(100vw - 6rem)" 
+                    src="./images/packages/aside/package_xl.gif">
                     <p class="card-text">
-                        Quaerat, accusantium doloribus alias minima, id illum voluptas excepturi dolorum voluptatibus
-                        possimus dignissimos repellendus et cumque qui non, ullam autem aliquam hic!
+                        Quaerat, accusantium doloribus alias minima, id illum voluptas excepturi dolorum voluptatibus!
                     </p>
                 </div>
             </div>
+
             <div class="card">
                 <div class="card-inner">
                     <h3 class="card-title">Card Title III</h3>
-                    <img src="./images/package.jpg" alt="" class="card-image">
+                    <!-- <img src="./images/packages/aside/package_l.gif" alt="" class="card-image"> -->
+                    <img class="card-image" alt="" srcset="
+                    ./images/packages/aside/package_xl.gif 370w, 
+                    ./images/packages/aside/package_l.gif 334w, 
+                    ./images/packages/aside/package_m.gif 300w, 
+                    ./images/packages/aside/package_s.gif 290w" 
+                    sizes="
+                    (min-width: calc(1020px + 4rem)) 300px,
+                    (min-width: 840px) 334px,
+                    (min-width: 680px) calc(50vw - 2rem - 60px),
+                    (min-width: calc(370px + 4rem)) 370px,
+                    calc(100vw - 6rem)" 
+                    src="./images/packages/aside/package_xl.gif">
                     <p class="card-text">
-                        Quaerat, accusantium doloribus alias minima, id illum voluptas excepturi dolorum voluptatibus
-                        possimus dignissimos repellendus et cumque qui non, ullam autem aliquam hic!
+                        Quaerat, accusantium doloribus alias minima, id illum voluptas excepturi dolorum voluptatibus!
                     </p>
                 </div>
             </div>
+
+
+              <div class="banner full">
+                <h3>Banner II</h3>
+                <picture>
+                    <source media="(min-width: calc(1200px + 4rem))" srcset="./images/andy/andy_square.jpg" />
+                    <source media="(min-width: 460px)" srcset="./images/andy/andy_landscape.jpg" />
+                    <source srcset="./images/andy/andy_portrait.jpg" />
+                    <img src="./images/andy/andy_lanscape.jpg" />
+                </picture>
+            </div>
+
         </aside>
 
 
@@ -73,12 +145,12 @@
 
             <h2>More Articles</h2>
             <div class="more-aricles">
-                <img src="./images/package.jpg" alt="" class="card-image">
-                <img src="./images/package.jpg" alt="" class="card-image">
-                <img src="./images/package.jpg" alt="" class="card-image">
-                <img src="./images/package.jpg" alt="" class="card-image">
-                <img src="./images/package.jpg" alt="" class="card-image">
-                <img src="./images/package.jpg" alt="" class="card-image">
+                <img src="./images/packages/package.jpg" alt="" class="card-image">
+                <img src="./images/packages/package.jpg" alt="" class="card-image">
+                <img src="./images/packages/package.jpg" alt="" class="card-image">
+                <img src="./images/packages/package.jpg" alt="" class="card-image">
+                <img src="./images/packages/package.jpg" alt="" class="card-image">
+                <img src="./images/packages/package.jpg" alt="" class="card-image">
             </div>
 
         </footer>
