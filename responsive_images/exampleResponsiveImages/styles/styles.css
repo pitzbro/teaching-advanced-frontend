@@ -194,7 +194,7 @@ footer {
 
 .more-aricles {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px
 }
 
