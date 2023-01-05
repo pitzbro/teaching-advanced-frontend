@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <img alt="responsive images" srcset="
+    ./img/star/stars_1280.jpg 1280w,
+    ./img/star/stars_860.jpg 860w,
+    ./img/star/stars_600.jpg 600w,
+    " sizes="
+    (min-width: 1280px) 1280px,
+    (min-width: 860px) 860px,
+    (min-width: 600px) 600px,
+    " src="./img/star/stars_600.jpg">
+
+    <img alt="responsive images" 
+    class="full-image"
+    srcset="
+    ./img/star/stars_1280.jpg 1280w,
+    ./img/star/stars_860.jpg 860w,
+    ./img/star/stars_600.jpg 600w,
+    "  
+    sizes="100vw"
+    src="./img/star/stars_600.jpg">
+
+
+    <picture>
+        <source media="(min-width: 1280px)" srcset="./img/andy/andy_landscape.jpg" />
+        <source media="(min-width: 860px)" srcset="./img/andy/andy_square.jpg" />
+        <source srcset="./img/andy/andy_portrait.jpg" />
+        <img src="./img/andy/andy_lanscape.jpg" />
+    </picture>
+
+</body>
+
+</html>
