@@ -1,0 +1,109 @@
+:root {
+    --el-size: 300px;
+    --clr-base: orange;
+    --clr-light: #ccc;
+    --clr-dark: #999;
+    --clr-dark-2: #2d2d2d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: Lato, helvetica, arial, sans-serif;
+    color: var(--clr-dark-2);
+    counter-reset: section;
+}
+
+h1 {
+    background-color: var(--clr-dark-2);
+    margin: 0;
+    padding: 1em;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+main {
+    flex: 1;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+    min-height: 100vh;
+
+}
+
+.training-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "h h"
+    "e i";
+
+    justify-items: center;
+    align-items: center;
+
+    min-height: 100vh;
+    scroll-snap-align: start;
+    border-bottom: 2px solid var(--clr-dark);
+}
+
+.training-container::before {
+    content: "";
+    grid-area: 2 / 1 / -1 / 2;
+    border-inline-end: 2px dashed var(--clr-dark);
+    background-color: var(--clr-light);
+
+    align-self: stretch;
+    justify-self: stretch;
+
+}
+
+.training-container > h2 {
+    grid-area: h;
+    border-bottom: 2px solid var(--clr-dark);
+    margin: 0;
+    justify-self: stretch;
+    padding: 1em;
+    font-size: 1.2rem;
+    font-weight: 900;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+.training-container > h2::before {
+    counter-increment: section;
+    content: "Training " counter(section) ": ";
+    font-weight: 400;
+}
+
+.training-container > img {
+    grid-area: i;
+}
+
+
+.training-el {
+    grid-area: e;
+    border: 2px solid var(--clr-dark);
+    min-width: var(--el-size);
+    min-height: var(--el-size);
+    justify-self: center;
+    background-color: #fff;
+    resize: both;
+    overflow: auto;
+    margin: 50px;
+}
+
+.training-el span {
+    background-color: var(--clr-base);
+    padding: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+}
