@@ -86,6 +86,7 @@ main {
 
 .training-container > img {
     grid-area: i;
+    border: 2px solid var(--clr-dark);
 }
 
 
