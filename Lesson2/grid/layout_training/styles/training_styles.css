@@ -46,8 +46,14 @@
 
 }
 
-/* Training 8 */
+/* Training 9 */
 /* 2D - Template Areas + Overlay */
 .training-container:nth-child(9) .training-el {
 
+}
+
+/* Training 10 */
+/* 2D - Implicit Grid */
+.training-container:nth-child(10) .training-el {
+    
 }
