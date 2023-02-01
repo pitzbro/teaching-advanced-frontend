@@ -8,7 +8,6 @@
     1rem;
     grid-template-rows: 100px auto 1fr 60px;
     gap: 10px;
-    min-height: 100vh;
 }
 
 .responsive-layout > * {
