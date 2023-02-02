@@ -37,7 +37,7 @@ h1 {
     font-weight: 400;
 }
 
-main {
+main.main-content {
     flex: 1;
     overflow-y: scroll;
     scroll-snap-type: y proximity;
@@ -131,14 +131,14 @@ main {
     margin: 50px;
 }
 
-.training-el span {
+.training-el :is(span, header, aside, main, footer) {
     background-color: var(--clr-base);
     padding: 10px;
     display: inline-block;
     text-transform: uppercase;
 }
 
-.training-el span.light {
+.training-el :is(span, header, aside, main, footer).light {
     background-color: var(--clr-base-light);
 }
 
