@@ -41,8 +41,6 @@ main {
     flex: 1;
     overflow-y: scroll;
     scroll-snap-type: y proximity;
-    min-height: 100vh;
-
 }
 
 .training-container {
@@ -56,7 +54,7 @@ main {
     justify-items: center;
     align-items: center;
 
-    min-height: 100vh;
+    min-height: calc(100% + 2px);
     scroll-snap-align: start;
     border-bottom: 2px solid var(--clr-dark);
 }
@@ -64,7 +62,6 @@ main {
 .training-container::before {
     content: "";
     grid-area: 2 / 1 / -1 / 2;
-    /* border-inline-end: 1px dashed var(--clr-dark); */
     background-color: var(--clr-light);
 
     align-self: stretch;
