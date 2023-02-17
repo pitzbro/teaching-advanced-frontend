@@ -45,10 +45,13 @@ h1 {
 .main-nav button {
     border-radius: 50%;
     border: none;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     background-color: transparent;
     color: #fff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
