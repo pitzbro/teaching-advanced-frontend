@@ -13,7 +13,13 @@
 </head>
 <body>
 
-    <h1>Layout Training</h1>
+    <header class="main-header">
+
+        <h1>Layout Training</h1>
+    
+        <nav class="main-nav"></nav>
+
+    </header>
 
     <main class="scroller main-content">
 
@@ -51,7 +57,7 @@
             <img src="./images/003.jpg" alt="">
         </div>
     
-        <div class="training-container"><header>Header</header>
+        <div class="training-container">
             <h2>Vertical 1D</h2>
             
             <div class="training-el">
@@ -178,23 +184,7 @@
 
     </main>
 
-    <script>
+    <script src="scripts/main.js"></script>
 
-        const containers = document.querySelectorAll('.training-container');
-        console.log('hello', containers)
-
-        const containerObserver = new IntersectionObserver(updateContainer, { threshold: .5,});
-
-        containers.forEach(container => containerObserver.observe(container));
-
-        function updateContainer(entries) {
-            console.log('observe')
-            entries.forEach(entry => {
-                const container = entry.target;
-                if (entry.isIntersecting) container.classList.add('active')
-                else container.classList.remove('active');
-            });
-        }
-    </script>
 </body>
 </html>

@@ -16,7 +16,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     display: flex;
     flex-direction: column;
@@ -29,27 +28,58 @@ body {
 }
 
 h1 {
-    background-color: var(--clr-dark-2);
     margin: 0;
-    padding: 1em;
-    color: #fff;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 400;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background-color: var(--clr-dark-2);
+    padding: 0.7em 1em;
+}
+
+.main-nav button {
+    border-radius: 50%;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    color: #fff;
+
+}
+
+.main-nav button:hover {
+    cursor: pointer;
+    color: var(--clr-base);
+}
+
+
+.main-nav button.active {
+    background-color: var(--clr-base);
+    font-weight: 600;
+    color: var(--clr-dark-2);
+
+    transition: background-color 1s;
 }
 
 main.main-content {
     flex: 1;
     overflow-y: scroll;
     scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
 }
 
 .training-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr;
-    grid-template-areas: 
-    "h h"
-    "e i";
+    grid-template-areas:
+        "h h"
+        "e i";
 
     justify-items: center;
     align-items: center;
@@ -66,7 +96,6 @@ main.main-content {
 
     align-self: stretch;
     justify-self: stretch;
-
 }
 
 .training-container::after {
@@ -91,15 +120,15 @@ main.main-content {
     border-bottom: 2px solid var(--clr-dark);
     margin: 0;
     justify-self: stretch;
-    padding: 1em;
-    font-size: 1.2rem;
+    padding: 0.6em 1em;
+    font-size: 1.125rem;
     font-weight: 900;
     position: sticky;
     top: 0;
     background-color: #fff;
     color: #fff;
 
-    transition: color .4s;
+    transition: color 0.4s;
 }
 
 .training-container.active > h2 {
@@ -117,7 +146,6 @@ main.main-content {
     border: 2px solid var(--clr-dark);
     margin: 50px;
 }
-
 
 .training-el {
     grid-area: e;
@@ -142,29 +170,68 @@ main.main-content {
     background-color: var(--clr-base-light);
 }
 
-
 .training-el img {
     width: 100%;
 }
 
-.masonry.horizontal > span:nth-child(1) { width: 60px; }
-.masonry.horizontal > span:nth-child(2) { width: 40px; }
-.masonry.horizontal > span:nth-child(3) { width: 50px; }
-.masonry.horizontal > span:nth-child(4) { width: 70px; }
-.masonry.horizontal > span:nth-child(5) { width: 20px; }
-.masonry.horizontal > span:nth-child(6) { width: 30px; }
-.masonry.horizontal > span:nth-child(7) { width: 40px; }
-.masonry.horizontal > span:nth-child(8) { width: 70px; }
-.masonry.horizontal > span:nth-child(9) { width: 20px; }
-.masonry.horizontal > span:nth-child(10) { width: 30px; }
+.masonry.horizontal > span:nth-child(1) {
+    width: 60px;
+}
+.masonry.horizontal > span:nth-child(2) {
+    width: 40px;
+}
+.masonry.horizontal > span:nth-child(3) {
+    width: 50px;
+}
+.masonry.horizontal > span:nth-child(4) {
+    width: 70px;
+}
+.masonry.horizontal > span:nth-child(5) {
+    width: 20px;
+}
+.masonry.horizontal > span:nth-child(6) {
+    width: 30px;
+}
+.masonry.horizontal > span:nth-child(7) {
+    width: 40px;
+}
+.masonry.horizontal > span:nth-child(8) {
+    width: 70px;
+}
+.masonry.horizontal > span:nth-child(9) {
+    width: 20px;
+}
+.masonry.horizontal > span:nth-child(10) {
+    width: 30px;
+}
 
-.masonry.vertical > span:nth-child(1) { height: 60px; }
-.masonry.vertical > span:nth-child(2) { height: 40px; }
-.masonry.vertical > span:nth-child(3) { height: 50px; }
-.masonry.vertical > span:nth-child(4) { height: 70px; }
-.masonry.vertical > span:nth-child(5) { height: 20px; }
-.masonry.vertical > span:nth-child(6) { height: 30px; }
-.masonry.vertical > span:nth-child(7) { height: 40px; }
-.masonry.vertical > span:nth-child(8) { height: 70px; }
-.masonry.vertical > span:nth-child(9) { height: 20px; }
-.masonry.vertical > span:nth-child(10) { height: 30px; }
+.masonry.vertical > span:nth-child(1) {
+    height: 60px;
+}
+.masonry.vertical > span:nth-child(2) {
+    height: 40px;
+}
+.masonry.vertical > span:nth-child(3) {
+    height: 50px;
+}
+.masonry.vertical > span:nth-child(4) {
+    height: 70px;
+}
+.masonry.vertical > span:nth-child(5) {
+    height: 20px;
+}
+.masonry.vertical > span:nth-child(6) {
+    height: 30px;
+}
+.masonry.vertical > span:nth-child(7) {
+    height: 40px;
+}
+.masonry.vertical > span:nth-child(8) {
+    height: 70px;
+}
+.masonry.vertical > span:nth-child(9) {
+    height: 20px;
+}
+.masonry.vertical > span:nth-child(10) {
+    height: 30px;
+}
