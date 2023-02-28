@@ -11,21 +11,43 @@
 
     <h1>Testing Fonts</h1>
 
+    <div class="form">
+
+        <div class="input-element">
+            <label for="password-input">Enter password</label>
+            <input type="password" name="password" id="password-input" placeholder="8 characters or more">
+        </div>
+
+        <div class="input-element">
+            <label for="password-input">Search list</label>
+            <input type="search" name="password" id="password-input" placeholder="8 characters or more">
+        </div>
+
+        <div class="input-element">
+            <label for="password-input">Find location</label>
+            <input type="text" name="password" id="password-input" placeholder="8 characters or more">
+        </div>
+
+        <div class="input-element">
+            <label for="password-input">Enter phone</label>
+            <input type="phone" name="password" id="password-input" placeholder="8 characters or more">
+        </div>
+
+    </div>
+
     <div class="anicons">
         ABCDEFGHIJKLMNOPQRSTUVWXabcdeghijkmnopqstuvwxyz0123456789.,;?!*
     </div>
 
-    <div class="form">
-        <label for="password-input">Enter password</label>
-        <input type="password" name="password" id="password-input" placeholder="8 characters or more">
-    </div>
-
     <script>
-        const passInput = document.querySelector('#password-input');
-        passInput.oninput = () => {
-            if (passInput.value.length >= 8 ) passInput.parentElement.classList.add('correct')
-            else passInput.parentElement.classList.remove('correct')
-        }
+        const passInputs = document.querySelectorAll('#password-input');
+
+        passInputs.forEach(passInput => {
+            passInput.oninput = () => {
+                if (passInput.value.length >= 8 ) passInput.parentElement.classList.add('correct')
+                else passInput.parentElement.classList.remove('correct')
+            }
+        });
     </script>
     
 </body>

@@ -3,7 +3,9 @@
 :root {
     --clr0: #ccc;
     --clr1: #2d2d2d;
-    --clr2: #7fd2f5;
+    --clr2: #ff7448;
+    --clr-base: #FFFF70;
+    --clr--1: #ffeb3b;
 
     /* varaibale fonts */
     --icon-end: 'TIME' 100;
@@ -53,67 +55,101 @@
 
 
 body {
-    /* background-color: green; */
+    display: grid;
+    justify-items: center;
     font-family: Amstelvar;
-    color: var(--clr1);
+    color: var(--clr2);
+    background-color: var(--clr2);
 }
 
 .anicons {
     font-family: Anicon;
     word-break: break-all;
+    color: var(--clr-base);
+    background: var(--clr2);
+    font-size: 4rem;
+    padding: 4rem;
+    letter-spacing: 0.8em;
+    line-height: 1.3em;
+}
+
+h1 {
+    color: var(--clr-base);
     font-size: 4rem;
 }
 
 input {
-    font-size: 2rem;
     border: none;
-    border-bottom: 1px solid var(--clr1);
-}
-
-.form {
-    display: grid;
-    gap: .6rem 1rem;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    margin: 4rem;
-    font-variation-settings: 'opsz' 8, 'wdth' 105;
-    font-size: 1.3rem;
-
-}
-
-label {
-    grid-area: 1 / 1 / 2 / 3;
-}
-
-.form::before {
-    content: "m";
-    font-family: AniconColor;
-    font-size: 2rem;
-    transition: font-variation-settings .6s;
-    font-variation-settings: var(--icon-start);
-}
-
-.form.correct::before {
-    font-variation-settings: var(--icon-end);
-}
-
-input {
-    font-size: 1rem;
+    border-bottom: 1px solid var(--clr2);
+    color: var(--clr2);
+    background-color: transparent;
+    font-size: 1.2rem;
     text-transform: uppercase;
     font-variation-settings: "wght" 400, "wdth" 100, "opsz" 8, "GRAD" 100;
-    line-height: 1.8em;
+    line-height: 1.6em;
+    max-width: 400px;
 }
 
 input:focus {
     outline: none;
-    border-color: var(--clr2);
-    /* border-width: 3px; */
 }
 
 input::placeholder {
     font-family: Amstelvar;
     font-style: italic;
-    color: var(--clr0);
-    /* font-weight: 100; */
-
+    color: var(--clr2);
+    font-size: 1rem;
+    text-transform: lowercase;
 }
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 1rem 6rem;
+    margin: 0 0 2rem;
+    padding: 6rem;
+    font-variation-settings: 'opsz' 8, 'wdth' 105;
+    font-size: 1rem;
+    max-width: 890px;
+    background-color: var(--clr-base);
+}
+
+.input-element {
+    display: grid;
+    gap: .6rem;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 2rem;
+    border: 1px solid transparent;
+
+    transition: box-shadow .4s;
+}
+
+.input-element:has(input:focus) {
+    box-shadow: -6px 6px 0 var(--clr2);
+    border-color: var(--clr2);
+}
+
+
+.input-element::before {
+    content: "6";
+    font-family: AniconColor;
+    font-family: Anicon;
+    font-size: 1.6rem;
+    transition: font-variation-settings .6s;
+    font-variation-settings: var(--icon-start);
+}
+
+.input-element.correct::before {
+    font-variation-settings: var(--icon-end);
+}
+
+.input-element label {
+    grid-area: 1 / 1 / 2 / 3;
+    font-size: 1.2rem;
+}
+
+.input-element:has(input[type="password"])::before { content: "m"; }
+.input-element:has(input[type="search"])::before { content: "6"; }
+.input-element:has(input[type="text"])::before { content: "."; }
+.input-element:has(input[type="phone"])::before { content: "1"; }
