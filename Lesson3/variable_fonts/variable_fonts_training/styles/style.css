@@ -55,11 +55,10 @@
 
 
 body {
-    display: grid;
-    justify-items: center;
     font-family: Amstelvar;
     color: var(--clr2);
     background-color: var(--clr2);
+    margin: 4rem 6rem;
 }
 
 .anicons {
@@ -76,6 +75,7 @@ body {
 h1 {
     color: var(--clr-base);
     font-size: 4rem;
+    text-align: center;
 }
 
 input {
@@ -106,7 +106,7 @@ input::placeholder {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 1rem 6rem;
-    margin: 0 0 2rem;
+    margin: 0 auto 2rem;
     padding: 6rem;
     font-variation-settings: 'opsz' 8, 'wdth' 105;
     font-size: 1rem;
