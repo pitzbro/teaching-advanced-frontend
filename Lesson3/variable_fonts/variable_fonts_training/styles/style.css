@@ -1,0 +1,119 @@
+/* VAR */
+
+:root {
+    --clr0: #ccc;
+    --clr1: #2d2d2d;
+    --clr2: #7fd2f5;
+
+    /* varaibale fonts */
+    --icon-end: 'TIME' 100;
+    --icon-start: 'TIME' 1;
+}
+
+/* AMSTELVAR */
+
+@font-face {
+    font-family: Amstelvar;
+    src: url('../fonts/amstelvar/amstelvar-roman.ttf');
+    font-stretch: 50% 125%;
+    font-weight: 100 1000;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Amstelvar;
+    src: url("../fonts/amstelvar/amstelvar-italic.ttf");
+    font-stretch: 50% 125%;
+    font-style: italic;
+    font-weight: 100 900;
+}
+
+/* WINNER FONT */
+
+@font-face {
+    font-family: Winner;
+    src: url("../fonts/winner/Winner-VF.woff2");
+    font-stretch: 0% 1000%;
+    font-style: oblique -15deg 0deg;
+    font-weight: 1 1000;
+}
+
+/* ANICONS FONT */
+
+@font-face {
+    font-family: AniconColor;
+    src: url("../fonts/anicons/AniconsColorGX.ttf");
+}
+
+@font-face {
+    font-family: Anicon;
+    src: url("../fonts/anicons/AniconsGX.ttf");
+}
+
+
+
+body {
+    /* background-color: green; */
+    font-family: Amstelvar;
+    color: var(--clr1);
+}
+
+.anicons {
+    font-family: Anicon;
+    word-break: break-all;
+    font-size: 4rem;
+}
+
+input {
+    font-size: 2rem;
+    border: none;
+    border-bottom: 1px solid var(--clr1);
+}
+
+.form {
+    display: grid;
+    gap: .6rem 1rem;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    margin: 4rem;
+    font-variation-settings: 'opsz' 8, 'wdth' 105;
+    font-size: 1.3rem;
+
+}
+
+label {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.form::before {
+    content: "m";
+    font-family: AniconColor;
+    font-size: 2rem;
+    transition: font-variation-settings .6s;
+    font-variation-settings: var(--icon-start);
+}
+
+.form.correct::before {
+    font-variation-settings: var(--icon-end);
+}
+
+input {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-variation-settings: "wght" 400, "wdth" 100, "opsz" 8, "GRAD" 100;
+    line-height: 1.8em;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--clr2);
+    /* border-width: 3px; */
+}
+
+input::placeholder {
+    font-family: Amstelvar;
+    font-style: italic;
+    color: var(--clr0);
+    /* font-weight: 100; */
+
+}

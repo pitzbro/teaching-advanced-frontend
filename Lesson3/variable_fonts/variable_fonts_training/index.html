@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Fonts</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <h1>Testing Fonts</h1>
+
+    <div class="anicons">
+        ABCDEFGHIJKLMNOPQRSTUVWXabcdeghijkmnopqstuvwxyz0123456789.,;?!*
+    </div>
+
+    <div class="form">
+        <label for="password-input">Enter password</label>
+        <input type="password" name="password" id="password-input" placeholder="8 characters or more">
+    </div>
+
+    <script>
+        const passInput = document.querySelector('#password-input');
+        passInput.oninput = () => {
+            if (passInput.value.length >= 8 ) passInput.parentElement.classList.add('correct')
+            else passInput.parentElement.classList.remove('correct')
+        }
+    </script>
+    
+</body>
+</html>
