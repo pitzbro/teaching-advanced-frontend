@@ -97,6 +97,8 @@ h1 {
     color: var(--clr-base);
     font-size: 4rem;
     text-align: center;
+    font-weight: 400;
+    font-variation-settings: 'opsz' 100, 'wdth' 110;
 }
 
 hr {
@@ -197,12 +199,14 @@ input::placeholder {
 /* ANIMATION */
 
 .animation {
-    /* display: flex; */
-    /* justify-content: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: Zycon;
     color: var(--clr-base);
-    font-size: 6rem;
+    font-size: 10rem;
     font-weight: normal;
+    height: 100vh;
 
     animation: time 1s linear infinite alternate;
 }
