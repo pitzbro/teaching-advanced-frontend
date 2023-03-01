@@ -39,6 +39,13 @@
     font-weight: 300 800;
 }
 
+/* ZYCON SANS FONT */
+
+@font-face {
+    font-family: Zycon;
+    src: url("../fonts/zycon/Zycon.woff2");
+}
+
 /* WINNER FONT */
 
 @font-face {
@@ -72,7 +79,7 @@ body {
     font-family: Amstelvar;
     color: var(--clr2);
     background-color: var(--clr2);
-    margin: 4rem 6rem;
+    margin: 4rem 1rem;
 }
 
 .anicons {
@@ -90,6 +97,11 @@ h1 {
     color: var(--clr-base);
     font-size: 4rem;
     text-align: center;
+}
+
+hr {
+    margin: 6rem 0 2rem;
+    border: 1px dashed var(--clr-base);
 }
 
 input {
@@ -123,12 +135,12 @@ input::placeholder {
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     gap: 1rem 4rem;
     margin: 0 auto 2rem;
-    padding: 6rem 6rem 8rem;
+    padding: 6rem clamp(2rem, 10vw, 6rem) 8rem;
     font-variation-settings: 'opsz' 30, 'wdth' 105;
     font-size: 1rem;
     max-width: 850px;
     background-color: var(--clr-base);
-    box-shadow: 0px 20px 0 #1a695f;
+    box-shadow: 0 1rem 0 #1a695f;
 }
 
 .input-element {
@@ -180,4 +192,35 @@ input::placeholder {
 
 .input-element:has(input[type="phone"])::before {
     content: "1";
+}
+
+/* ANIMATION */
+
+.animation {
+    /* display: flex; */
+    /* justify-content: center; */
+    font-family: Zycon;
+    color: var(--clr-base);
+    font-size: 6rem;
+    font-weight: normal;
+
+    animation: time 1s linear infinite alternate;
+}
+
+@keyframes time {
+    0% {
+        font-variation-settings: 'T1  ' 1 , 'T2  ' 1, 'T3  ' 0;   
+    } 
+    30% {
+        font-variation-settings: 'T1  ' 0 , 'T2  ' 1, 'T3  ' 0;   
+    }
+    50% {
+        font-variation-settings: 'T1  ' 0 , 'T2  ' 0, 'T3  ' 0;   
+    }
+    70% {
+        font-variation-settings: 'T1  ' 0 , 'T2  ' 0, 'T3  ' 0;   
+    }
+    100% {
+        font-variation-settings: 'T1  ' 0 , 'T2  ' 0, 'T3  ' 1;   
+    }
 }
