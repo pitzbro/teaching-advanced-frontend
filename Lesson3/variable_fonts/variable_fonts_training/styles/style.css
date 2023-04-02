@@ -2,8 +2,9 @@
 
 :root {
     --clr0: #ccc;
-    --clr1: #2d2d2d;
-    --clr2: #009688;
+    /* --clr1: #2d2d2d; */
+    /* --clr2: #009688; */
+    --clr2: #424242;
     --clr-base: #FFFF70;
     --clr--1: #ffeb3b;
     --clr--2: #fff;
@@ -104,7 +105,7 @@ h1 {
 
 hr {
     margin: 6rem 0 2rem;
-    border: 1px dashed var(--clr-base);
+    border: 1px dashed var(--clr--2);
 }
 
 input {
@@ -143,7 +144,7 @@ input::placeholder {
     font-size: 1rem;
     max-width: 850px;
     background-color: var(--clr--2);
-    box-shadow: 0 1rem 0 #1a695f;
+    /* box-shadow: 0 1rem 0 #1a695f; */
 }
 
 .input-element {
