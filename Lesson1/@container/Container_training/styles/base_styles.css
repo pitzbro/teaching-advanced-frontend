@@ -200,6 +200,15 @@ main.main-content {
     margin: 50px;
 }
 
+.training-container>span.width-label {
+    grid-area: 2 / 1;
+    align-self: end;
+    background: #727272;
+    color: #fff;
+    margin: 20px;
+    padding: 5px 16px 8px;
+}
+
 .training-el {
     grid-area: e;
     border: 2px solid var(--clr-dark);
@@ -210,6 +219,7 @@ main.main-content {
     resize: both;
     overflow: auto;
     margin: 50px;
+    padding: 20px;
 }
 
 .training-el :is(span, header, aside, main, footer).light {
@@ -222,9 +232,8 @@ main.main-content {
 
 .container {
     container-type: inline-size;
-    padding: 20px;
 }
 
-.training-container:nth-child(1) .container {
+.training-container:nth-child(1) .training-el {
     resize: horizontal;
 }

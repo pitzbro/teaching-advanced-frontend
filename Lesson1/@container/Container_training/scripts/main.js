@@ -43,3 +43,19 @@ function updateContainer(entries) {
         }
     });
 }
+
+// @container width indicator 
+
+const containerEls = document.querySelectorAll('.training-el');
+const resizeObserver = new ResizeObserver(outputsize);
+
+containerEls.forEach(el => resizeObserver.observe(el));
+
+function outputsize(entries) {
+    entries.forEach(entry => {
+        const container = entry.target;
+        const label = container.parentNode.querySelector('.width-label');
+        const w = container.querySelector('.container').offsetWidth;
+        label.innerText = 'width: ' + w + 'px';
+    })
+}

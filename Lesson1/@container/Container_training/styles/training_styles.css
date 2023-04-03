@@ -1,7 +1,7 @@
 /* Training 1 */
 /* Simple Alignment */
 
-@container (max-width: 373px) {
+@container (max-width: 370px) {
     .training-container:nth-child(1) .container>span {
         min-width: .6em;
         line-height: 1.6em;
