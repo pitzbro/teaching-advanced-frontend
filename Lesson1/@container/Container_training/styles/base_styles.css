@@ -3,51 +3,6 @@
     src: url(../fonts/fa-brands-400.ttf);
 }
 
-.fa {
-    color: #fff;
-    padding: 0 1em;
-    min-width: 7em;
-    line-height: 2.2;
-    display: inline-block;
-    border-radius: 4px;
-    text-align: center;
-    margin-bottom: 1em;
-}
-
-.container .fa:not(:last-child) {
-    margin-inline-end: .6em;
-}
-
-.fa::before {
-    font-family: fa;
-    margin-inline-end: .3em;
-}
-
-.fa.facebook::before {
-    content: '\f09a';
-}
-
-.fa.pintrest::before {
-    content: '\f0d2';
-}
-
-.fa.linkedin::before {
-    content: '\f0e1';
-}
-
-.fa.facebook {
-    background-color: #1977f3;
-}
-
-.fa.pintrest {
-    background-color: #bc071b;
-}
-
-.fa.linkedin {
-    background-color: #1c75b5;
-}
-
-
 :root {
     --el-size: 200px;
     --clr-base: orange;
@@ -216,10 +171,11 @@ main.main-content {
     min-height: var(--el-size);
     justify-self: center;
     background-color: #fff;
-    resize: both;
+    resize: horizontal;
     overflow: auto;
     margin: 50px;
     padding: 20px;
+    overflow: hidden;
 }
 
 .training-el :is(span, header, aside, main, footer).light {
@@ -234,6 +190,77 @@ main.main-content {
     container-type: inline-size;
 }
 
-.training-container:nth-child(1) .training-el {
-    resize: horizontal;
+/* Social Sharing */
+
+.fa {
+    color: #fff;
+    padding: 0 1em;
+    min-width: 7em;
+    line-height: 2.2;
+    display: inline-block;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.container .fa:not(:last-child) {
+    margin-inline-end: .6em;
+}
+
+.fa::before {
+    font-family: fa;
+    margin-inline-end: .3em;
+}
+
+.fa.facebook::before {
+    content: '\f09a';
+}
+
+.fa.pintrest::before {
+    content: '\f0d2';
+}
+
+.fa.linkedin::before {
+    content: '\f0e1';
+}
+
+.fa.facebook {
+    background-color: #1977f3;
+}
+
+.fa.pintrest {
+    background-color: #bc071b;
+}
+
+.fa.linkedin {
+    background-color: #1c75b5;
+}
+
+/* Pager */
+
+.pager-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 4px;
+}
+
+.pager-container button {
+    border: none;
+    border-radius: 2em;
+    line-height: 2;
+    min-width: 4em;
+    width: 6em;
+    background-color: #e0e0e0;
+}
+
+.pager-container span {
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #727272;
 }

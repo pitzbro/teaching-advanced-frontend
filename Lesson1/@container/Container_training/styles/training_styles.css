@@ -18,7 +18,35 @@
 
 /* Training 2 */
 /* Overlays */
-.training-container:nth-child(2) .container {}
+
+.training-container:nth-child(2) .pager-container span {
+    display: none;
+}
+
+.training-container:nth-child(2) .pager-container button {
+    flex: 100%;
+}
+
+@container (min-width: 200px) {
+    .training-container:nth-child(2) .pager-container {
+        justify-content: space-between;
+    }
+
+    .training-container:nth-child(2) .pager-container button {
+        flex: unset;
+    }
+}
+
+@container (min-width: 380px) {
+    .training-container:nth-child(2) .pager-container {
+        justify-content: start;
+    }
+
+    .training-container:nth-child(2) .pager-container span {
+        display: flex;
+    }
+}
+
 
 /* Training 3 */
 /* Horizontal 1D */

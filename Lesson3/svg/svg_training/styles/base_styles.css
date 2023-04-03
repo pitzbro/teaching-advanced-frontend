@@ -116,7 +116,7 @@ main.main-content {
     transform: translateX(100%);
 }
 
-.training-container > h2 {
+.training-container>h2 {
     grid-area: h;
     border-bottom: 2px solid var(--clr-dark);
     margin: 0;
@@ -132,17 +132,17 @@ main.main-content {
     transition: color 0.4s;
 }
 
-.training-container.active > h2 {
+.training-container.active>h2 {
     color: inherit;
 }
 
-.training-container > h2::before {
+.training-container>h2::before {
     counter-increment: section;
     content: "Training " counter(section) ": ";
     font-weight: 400;
 }
 
-.training-container > img {
+.training-container>img {
     grid-area: i;
     border: 2px solid var(--clr-dark);
     margin: 50px;
@@ -158,6 +158,7 @@ main.main-content {
     resize: both;
     overflow: hidden;
     margin: 50px;
+    overflow: hidden;
 }
 
 .training-el svg {
