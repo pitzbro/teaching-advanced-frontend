@@ -1,5 +1,5 @@
 /* Training 1 */
-/* Simple Alignment */
+/* Social */
 
 @container (max-width: 370px) {
     .training-container:nth-child(1) .container>span {
@@ -17,7 +17,7 @@
 }
 
 /* Training 2 */
-/* Overlays */
+/* Pager */
 
 .training-container:nth-child(2) .pager-container span {
     display: none;
@@ -49,12 +49,75 @@
 
 
 /* Training 3 */
-/* Horizontal 1D */
-.training-container:nth-child(3) .container {}
+/* Search */
+@container (min-width: 328px) {
+    .training-container:nth-child(3) input {
+        font-size: 16px;
+        border-width: 2px;
+        padding-inline-start: 2.8em;
+    }
+
+    .t-search-container>i {
+        display: block;
+    }
+
+    .t-search-container button {
+        align-self: center;
+        line-height: 2.4;
+        margin-inline-end: .4em;
+    }
+
+    .t-search-container button i {
+        display: none;
+    }
+
+    .t-search-container button span {
+        display: block;
+    }
+}
 
 /* Training 4 */
 /* Vertical 1D */
-.training-container:nth-child(4) .container {}
+
+.t-grid-container>*:is(:nth-child(4), :nth-child(5)) {
+    grid-row: span 1;
+}
+
+.t-grid-container>*:nth-child(6) {
+    grid-row: span 3;
+}
+
+@container (min-width: 170px) {
+
+    .t-grid-container .card {
+        flex-direction: row;
+    }
+
+    .t-grid-container .card-image {
+        background-color: var(--bg2);
+    }
+}
+
+@container (min-width: 350px) {
+
+    .t-grid-container .card-image {
+        background-color: var(--bg3);
+    }
+
+    .t-grid-container .card {
+        display: grid;
+    }
+
+    .t-grid-container .card>* {
+        grid-area: 1 / 1 / -1 / -1;
+    }
+
+    .t-grid-container .card-text {
+        /* align-self: end; */
+        justify-self: center;
+        margin-top: 32%;
+    }
+}
 
 /* Training 5 */
 /* Masonry Horizontal */
