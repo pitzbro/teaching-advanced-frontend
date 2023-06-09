@@ -1,10 +1,14 @@
+:root {
+    --gap: 10px;
+}
+
 .responsive-layout {
     margin: 0;
     background-color: #d7d7d7;
 }
 
 .responsive-layout > * {
-    padding: 10px;
+    padding: var(--gap);
 }
 
 .responsive-layout > aside {
@@ -28,33 +32,23 @@
 main > div {
     background-color: lightsalmon;
     aspect-ratio: 1 / 1;
-    padding: 10px;
+    padding: var(--gap);
 }
 
 main > div > span {
     background-color: #e5845d;
     aspect-ratio: 1 / 1;
-    padding: 10px;
+    padding: var(--gap);
 }
-
 
 /* Media Queries */
-
-/* SMALL */
-
-@media (min-width: 800px) {
-
-    
-}
 
 /* MEDIUM */
 
 @media (min-width: 970px) {
-
 }
 
 /* LARGE */
 
 @media (min-width: 1120px) {
-
 }
